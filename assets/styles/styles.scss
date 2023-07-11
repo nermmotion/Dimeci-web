@@ -35,3 +35,113 @@ body {
         font-weight: 300;
     }
 }
+
+/* styles acordion */
+
+
+.container {
+    max-width: 5000px;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+}
+.single {
+    padding: 0 4rem;
+    display: grid;
+    place-content: center;
+    width: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    transition: 500ms ease-in-out width;
+}
+.single::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: 500ms ease-in-out background-color;
+}
+
+
+
+.single:nth-child(1) {
+    background-image: url("assets/images/accordion/orange.png");
+}
+.single:nth-child(2) {
+    background-image: url(https://img.freepik.com/foto-gratis/close-up-rodajas-pomelo_23-2148804855.jpg?w=1380&t=st=1689033121~exp=1689033721~hmac=217fdf443e77055a10eff64044bb5c680326312774282ba1a5a74ea735510e5e);
+}
+.single:nth-child(3) {
+    background-image: url(https://img.freepik.com/foto-gratis/lima-rodajas-limon-naranja_1339-4600.jpg?w=1060&t=st=1689032733~exp=1689033333~hmac=8a686b16f79c95ffe4bf6af12ab36c27a8923c4e4aef2eb87267a5bde5ee6cea);
+}
+.single:nth-child(4) {
+    background-image: url(https://img.freepik.com/foto-gratis/vista-superior-arreglo-textura-rodajas-lima_23-2149433502.jpg?w=740&t=st=1689019005~exp=1689019605~hmac=5229e1ec2e54c4c63fa9e1eef0342c90f0569acac12e6b56d593b0575c096f58);
+}
+
+
+.content {
+    transition: 500ms ease-in-out transform;
+}
+
+p {
+    color: #fff;
+    padding: 0;
+    border-radius: .5rem;
+    border: none;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms ease-in-out height,
+                500ms ease-in-out padding;
+}
+
+h2 {
+    text-align: center;
+    color: #f0f8ff;
+    margin-bottom: 1rem;
+    transform: scale(1.3);
+    transition: 500ms ease-in-out transform;
+}
+h1{
+
+color: #f0f8ff;
+padding: 0;
+border-radius: .5rem;
+border: none;
+height: 0;
+
+overflow: hidden;
+transition: 500ms ease-in-out height,
+            500ms ease-in-out padding;
+}
+
+
+
+.single:hover {
+    width: 1400px;
+}
+.single:hover::before {
+    background-color: rgba(0, 0, 0, .3);
+}
+.single:hover .content {
+    transform: rotate(0);
+}
+
+.single:hover h1 {
+    height: 20%;
+    padding: 4px;
+}
+
+.single:hover h2 {
+
+    text-align: left;
+    transform: scale(1);
+}
+.single:hover p {
+    height: 100%;
+    padding: 1rem;
+    text-align: left;
+}
+.single:hover img {
+    display: none;
+}
