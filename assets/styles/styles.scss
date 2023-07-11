@@ -130,13 +130,14 @@ body {
     padding: 0 4rem;
     display: grid;
     place-content: center;
-    width: 1200px;
+    flex: 1;
+    /* width: 1200px; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     position: relative;
-    transition: 800ms ease-in-out width;
+    transition: 300ms ease-in-out flex;
 }
 .single::before {
     content: '';
@@ -165,42 +166,36 @@ body {
     transition: 500ms ease-in-out transform;
 }
 
-p {
-    color: #fff;
-    padding: 0;
-    border-radius: .5rem;
-    border: none;
-    height: 0;
-    overflow: hidden;
-    transition: 500ms ease-in-out height,
-                500ms ease-in-out padding;
-}
-
-h2 {
+.content h3 {
+    display: none;
     text-align: center;
     color: #f0f8ff;
     margin-bottom: 1rem;
     transform: scale(1);
     transition: 500ms ease-in-out transform;
 }
-h1{
-
+.content h4{
     font-size:xx-large;
-color: #f0f8ff;
-padding: 0;
-border-radius: .5rem;
-border: none;
-height: 0;
-
-overflow: hidden;
-transition: 500ms ease-in-out height,
-            500ms ease-in-out padding;
+    color: #f0f8ff;
+    padding: 0;
+    border-radius: .5rem;
+    border: none;
+    transition: 500ms ease-in-out height,
+                500ms ease-in-out padding;
 }
 
-
+.p-content_single p {
+    display: none;
+    color: white;
+}
 
 .single:hover {
-    width: 1700px;
+    /* width: 1700px; */
+    flex: 4;
+    .p-content_single p {
+            display: block;
+            color: white;
+    }
 }
 .single:hover::before {
     background-color: rgba(0, 0, 0, .3);
@@ -209,21 +204,17 @@ transition: 500ms ease-in-out height,
     transform: rotate(0);
 }
 
-.single:hover h1 {
+.single:hover h4 {
     height: 20%;
     padding: 4px;
 }
 
-.single:hover h2 {
-
+.single:hover h3 {
+    display: block;
     text-align: left;
     transform: scale(1);
 }
-.single:hover p {
-    height: 100%;
-    padding: 1rem;
-    text-align: left;
-}
+
 .single:hover img {
     display: none;
 }

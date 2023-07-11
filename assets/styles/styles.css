@@ -83,9 +83,32 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
-
+  font-size: 2.5rem;
 }
 
+/* Banner green End */
+/* MEDIA QUERIES MOBILE */
+@media only screen and (max-width: 768px) {
+  .bg-navbar {
+    background-color: rgba(43, 43, 43, 0.9);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 2rem;
+  }
+  .contain-title > h1 {
+    font-size: 2rem;
+  }
+  .contain-description > p {
+    font-size: 1.1rem;
+  }
+  .img-hero {
+    width: 200%;
+  }
+  .middle-banner h2 {
+    font-size: 2rem;
+  }
+}
 /* styles acordion */
 .container {
   max-width: 5020px;
@@ -98,13 +121,14 @@ body {
   padding: 0 4rem;
   display: grid;
   place-content: center;
-  width: 1200px;
+  flex: 1;
+  /* width: 1200px; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   position: relative;
-  transition: 800ms ease-in-out width;
+  transition: 300ms ease-in-out flex;
 }
 
 .single::before {
@@ -134,17 +158,8 @@ body {
   transition: 500ms ease-in-out transform;
 }
 
-p {
-  color: #fff;
-  padding: 0;
-  border-radius: 0.5rem;
-  border: none;
-  height: 0;
-  overflow: hidden;
-  transition: 500ms ease-in-out height, 500ms ease-in-out padding;
-}
-
-h2 {
+.content h3 {
+  display: none;
   text-align: center;
   color: #f0f8ff;
   margin-bottom: 1rem;
@@ -152,19 +167,27 @@ h2 {
   transition: 500ms ease-in-out transform;
 }
 
-h1 {
+.content h4 {
   font-size: xx-large;
   color: #f0f8ff;
   padding: 0;
   border-radius: 0.5rem;
   border: none;
-  height: 0;
-  overflow: hidden;
   transition: 500ms ease-in-out height, 500ms ease-in-out padding;
 }
 
+.p-content_single p {
+  display: none;
+  color: white;
+}
+
 .single:hover {
-  width: 1700px;
+  /* width: 1700px; */
+  flex: 4;
+}
+.single:hover .p-content_single p {
+  display: block;
+  color: white;
 }
 
 .single:hover::before {
@@ -175,48 +198,17 @@ h1 {
   transform: rotate(0);
 }
 
-.single:hover h1 {
+.single:hover h4 {
   height: 20%;
   padding: 4px;
 }
 
-.single:hover h2 {
+.single:hover h3 {
+  display: block;
   text-align: left;
   transform: scale(1);
 }
 
-.single:hover p {
-  height: 100%;
-  padding: 1rem;
-  text-align: left;
-}
-
 .single:hover img {
   display: none;
-  font-size: 2.5rem;
-}
-
-/* Banner green End */
-/* MEDIA QUERIES MOBILE */
-@media only screen and (max-width: 768px) {
-  .bg-navbar {
-    background-color: rgba(43, 43, 43, 0.9);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  }
-  .navbar-dark .navbar-nav .nav-link {
-    font-size: 2rem;
-  }
-  .contain-title > h1 {
-    font-size: 2rem;
-  }
-  .contain-description > p {
-    font-size: 1.1rem;
-  }
-  .img-hero {
-    width: 200%;
-  }
-  .middle-banner h2 {
-    font-size: 2rem;
-  }
-
 }/*# sourceMappingURL=styles.css.map */
