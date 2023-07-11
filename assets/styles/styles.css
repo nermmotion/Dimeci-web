@@ -110,7 +110,7 @@ body {
   }
 }
 /* styles acordion */
-.container {
+.container-accordion {
   max-width: 5020px;
   height: 700px;
   display: flex;
