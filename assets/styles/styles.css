@@ -69,7 +69,7 @@ body {
 }
 
 .single:nth-child(2) {
-  background-image: url(https://img.freepik.com/foto-gratis/close-up-rodajas-pomelo_23-2148804855.jpg?w=1380&t=st=1689033121~exp=1689033721~hmac=217fdf443e77055a10eff64044bb5c680326312774282ba1a5a74ea735510e5e);
+  background-image: url("https://img.freepik.com/foto-gratis/close-up-rodajas-pomelo_23-2148804855.jpg?w=1380&t=st=1689033121~exp=1689033721~hmac=217fdf443e77055a10eff64044bb5c680326312774282ba1a5a74ea735510e5e");
 }
 
 .single:nth-child(3) {
