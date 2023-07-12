@@ -213,6 +213,7 @@ body {
   display: none;
 }
 
+
 /*CALIDAD PREMIUM STYLES*/
 .premium {
   background-image: url(/assets/images/bg-premium.png);
@@ -252,3 +253,72 @@ body {
   height: auto;
   margin-bottom: 100px;
 }/*# sourceMappingURL=styles.css.map */
+
+/* Maps and Contact Styles Start */
+.maps-title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.content-map {
+  position: relative;
+  z-index: 1;
+}
+
+.img-map {
+  max-width: 900px;
+  width: 100%;
+}
+
+.btn-contact {
+  position: absolute;
+  z-index: 11;
+}
+
+.btn-custom_border {
+  border: 3px solid #417505;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 0.2rem;
+}
+
+.btn-text {
+  padding: auto 2rem;
+}
+
+.btn-custom_center {
+  background-color: #417505;
+  border: none;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .maps-title {
+    font-size: 2rem;
+  }
+}
+/* Maps and Contact Styles End */
+/* Footer Styles Start */
+.bg-footer {
+  background-color: #404040;
+}
+
+.logo-site_footer {
+  max-width: 150px;
+  width: 100%;
+}
+
+.item-footer span,
+.item-footer a {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .item-footer span,
+  .item-footer a {
+    text-align: center;
+  }
+}
+/* Footer Styles End *//*# sourceMappingURL=styles.css.map */
+
