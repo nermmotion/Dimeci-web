@@ -213,6 +213,47 @@ body {
   display: none;
 }
 
+
+/*CALIDAD PREMIUM STYLES*/
+.premium {
+  background-image: url(/assets/images/bg-premium.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.premium .premium-title {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.premium .txt-subtitle h3 {
+  color: #F57F17;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.premium .certificate .iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.premium .certificate .iconos .icon-item {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+.premium .certificate .iconos .icon-item a:hover {
+  filter: invert(51%) sepia(97%) saturate(1677%) hue-rotate(353deg) brightness(102%) contrast(92%);
+}
+.premium .certificate .icon-img {
+  filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
+  width: 200px;
+  height: auto;
+  margin-bottom: 100px;
+}/*# sourceMappingURL=styles.css.map */
+
 /* Maps and Contact Styles Start */
 .maps-title {
   font-size: 3rem;
@@ -280,3 +321,4 @@ body {
   }
 }
 /* Footer Styles End *//*# sourceMappingURL=styles.css.map */
+
