@@ -213,9 +213,8 @@ body {
   display: none;
 }
 
-
 /*CALIDAD PREMIUM STYLES*/
-.premium {
+#premium {
   background-image: url(/assets/images/bg-premium.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,35 +223,35 @@ body {
   overflow: hidden;
   position: relative;
 }
-.premium .premium-title {
+#premium .premium-title {
   font-size: 3rem;
   font-weight: 400;
 }
-.premium .txt-subtitle h3 {
+#premium .txt-subtitle h3 {
   color: #F57F17;
   font-size: 3rem;
   font-weight: 800;
 }
-.premium .certificate .iconos {
+#premium .certificate .iconos {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-.premium .certificate .iconos .icon-item {
+#premium .certificate .iconos .icon-item, #premium .certificate .iconos .icon-dif {
   display: inline-block;
   align-items: center;
   justify-content: center;
 }
-.premium .certificate .iconos .icon-item a:hover {
+#premium .certificate .iconos .icon-item a:hover, #premium .certificate .iconos .icon-dif a:hover {
   filter: invert(51%) sepia(97%) saturate(1677%) hue-rotate(353deg) brightness(102%) contrast(92%);
 }
-.premium .certificate .icon-img {
+#premium .certificate .icon-img,
+#premium .certificate .icon-dif {
   filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
   width: 200px;
   height: auto;
-  margin-bottom: 100px;
-}/*# sourceMappingURL=styles.css.map */
+}
 
 /* Maps and Contact Styles Start */
 .maps-title {
@@ -296,6 +295,18 @@ body {
   .maps-title {
     font-size: 2rem;
   }
+  #premium .premium-title {
+    font-size: 2rem;
+  }
+  #premium .txt-subtitle h3 {
+    font-size: 2rem;
+  }
+  #premium .certificate .icon-img {
+    width: 180px;
+  }
+  #premium .certificate .icon-dif {
+    width: 250px;
+  }
 }
 /* Maps and Contact Styles End */
 /* Footer Styles Start */
@@ -321,4 +332,3 @@ body {
   }
 }
 /* Footer Styles End *//*# sourceMappingURL=styles.css.map */
-
