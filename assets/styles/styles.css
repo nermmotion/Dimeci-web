@@ -97,10 +97,10 @@ body {
     font-size: 2rem;
   }
   .contain-title > h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .contain-description > p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .img-hero {
     width: 200%;
@@ -139,19 +139,19 @@ body {
 }
 
 .single:nth-child(1) {
-  background-image: url("../images/orange.png");
+  background-image: url("../images/orange.webp");
 }
 
 .single:nth-child(2) {
-  background-image: url("/assets/images/mandarina.png");
+  background-image: url("/assets/images/mandarina.webp");
 }
 
 .single:nth-child(3) {
-  background-image: url(/assets/images/toronja.png);
+  background-image: url(/assets/images/toronja.webp);
 }
 
 .single:nth-child(4) {
-  background-image: url(/assets/images/lemon.png);
+  background-image: url(/assets/images/lemon.webp);
 }
 
 .content {
@@ -220,7 +220,7 @@ body {
 }
 /*CALIDAD PREMIUM STYLES*/
 #premium {
-  background-image: url(/assets/images/bg-premium.png);
+  background-image: url(/assets/images/bg-premium.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -251,7 +251,11 @@ body {
 #premium .certificate .iconos .icon-item a:hover, #premium .certificate .iconos .icon-dif a:hover {
   filter: invert(51%) sepia(97%) saturate(1677%) hue-rotate(353deg) brightness(102%) contrast(92%);
 }
-#premium .certificate .icon-img,
+#premium .certificate .icon-img {
+  filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
+  width: 135px;
+  height: auto;
+}
 #premium .certificate .icon-dif {
   filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
   width: 200px;
@@ -300,6 +304,9 @@ body {
   .maps-title {
     font-size: 2rem;
   }
+  #premium {
+    background-size: contain;
+  }
   #premium .premium-title {
     font-size: 2rem;
   }
@@ -307,10 +314,10 @@ body {
     font-size: 2rem;
   }
   #premium .certificate .icon-img {
-    width: 180px;
+    width: 110px;
   }
   #premium .certificate .icon-dif {
-    width: 250px;
+    width: 150px;
   }
 }
 /*CARRUSEL RESPONSIVE*/

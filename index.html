@@ -11,6 +11,9 @@
     />
     <meta name="Dimeci" content="DIMECI" />
 
+    <!-- Animate on Scroll AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Bootsrat Library -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -25,11 +28,11 @@
   <body>
     <main>
       <nav class="navbar navbar-expand-lg bg-navbar navbar-dark">
-        <div class="container-fluid justify-content-between mx-5 px-lg-5">
+        <div class="container-fluid justify-content-between mx-3 px-lg-5">
           <a class="navbar-brand" href="#">
             <img
               class="site-logo"
-              src="assets/images/Logo-Dimeci.png"
+              src="assets/images/Logo-Dimeci.webp"
               alt="Logo DIMECI"
             />
           </a>
@@ -71,14 +74,19 @@
         <div
           class="hero-banner d-flex align-items-center justify-content-center"
         >
-          <div class="container row d-grid text-white">
+          <div 
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          class="container row d-grid text-white">
             <div class="col-12 col-lg-8 contain-title">
-              <h1 class="px-5 px-lg-0">
+              <h1 class="px-2 px-lg-0">
                 El placer de la inspiración<br />en cada gota
               </h1>
             </div>
             <div class="col-12 col-lg-6 contain-description mt-lg-4">
-              <p class="px-5 px-lg-0">
+              <p class="px-2 px-lg-0">
                 DIMECI ofrece el conocimiento necesario del mercado y los
                 consumidores para crear sabores y fragancias que convierten
                 productos en marcas memorables.
@@ -88,7 +96,7 @@
         </div>
         <img
           class="img-hero"
-          src="assets/images/hero-image.jpg"
+          src="assets/images/hero-image.webp"
           alt="hero-banner image"
         />
       </div>
@@ -178,7 +186,7 @@
 		</div>
 		<div class="item-general carousel-inner">
 			<div class="carrusel-items carousel-item active ">
-				<img alt="..." class="image-item d-block w-100"  src="assets/images/img-carrosel/orange.png">
+				<img alt="..." class="image-item d-block w-100"  src="assets/images/img-carrosel/orange.webp">
 				<div class="carrusel-by carousel-caption">
           <h2 class="title-one text-center fw-light">NUESTROS PRODUCTOS</h2>
 					<h5 class="title-item text-center">NARANJA</h5>
@@ -187,7 +195,7 @@
 				</div>
 			</div>
 			<div class="carrusel-items carousel-item">
-				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/mandarina.png">
+				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/mandarina.webp">
 				<div class="carrusel-by carousel-caption ">
           <h2 class="title-one text-center fw-light">NUESTROS PRODUCTOS</h2>
 					<h5 class="title-item text-center">MANDARINA</h5>
@@ -201,7 +209,7 @@
 				</div>
 			</div>
 			<div class="carrusel-items carousel-item">
-				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/toronja.png">
+				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/toronja.webp">
 				<div class="carrusel-by carousel-caption">
           <h2 class="title-one text-center fw-light">NUESTROS PRODUCTOS</h2>
 					<h5 class="title-item text-center">TORONJA</h5>
@@ -210,7 +218,7 @@
 				</div>
 			</div>
             <div class="carrusel-items carousel-item">
-				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/lemon.png">
+				<img alt="..." class="image-item d-block w-100" src="assets/images/img-carrosel/lemon.webp">
 				<div class="carrusel-by carousel-caption">
           <h2 class="title-one text-center fw-light">NUESTROS PRODUCTOS</h2>
 					<h5 class="title-item text-center">LIMÓN</h5>
@@ -224,26 +232,34 @@
     <!-- PREMIUM CALIDAD -->
     <section id="premium">
         <div class="d-flex align-items-center justify-content-center flex-column">
-         <div class="txt-subtitle my-5 gap-lg-5">
+         <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          class="txt-subtitle my-5 gap-lg-5">
            <h2 class="text-center text-uppercase premium-title">CALIDAD PREMIUM</h2>
            <h3 class="text-center">Nuestras Certificaciones</h3>
           </div>
       <!-- ICONS CERTIFICATE -->
         <div class="certificate container">
-          <div class="iconos d-flex flex-column flex-lg-row flex-wrap gap-lg-4 align-items-center justify-content-center mb-4 mb-lg-5">
+          <div
+          data-aos="fade-up"
+          data-aos-once="false"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="iconos d-flex flex-column flex-lg-row gap-lg-5 align-items-center justify-content-center mb-4 mb-lg-5">
             <div class="d-flex align-items-center justify-content-center gap-5 mb-3 mb-lg-5">
               <div class="icon-item">
-                <a class="item-a" href=""><img class="icon-img" src="assets/Icons/Haccp.png" alt=""></a>
+                <a class="item-a" href=""><img class="icon-img" src="assets/Icons/Haccp.webp" alt=""></a>
               </div>
               <div class="icon-item">
-                <a class="item-a" href=""><img class="icon-img" src="assets/Icons/Halal.png" alt=""></a>
+                <a class="item-a" href=""><img class="icon-img" src="assets/Icons/Halal.webp" alt=""></a>
               </div>
             </div>
             <div class="d-flex align-items-center justify-content-center gap-5 mb-3 mb-lg-5">
               <div class="icon-item">
-                <a class="item-a" href=""><img class="icon-img" src="assets/Icons/Primus.png" alt=""></a>
+                <a class="item-a" href=""><img class="icon-dif" src="assets/Icons/Primus.webp" alt=""></a>
               </div>
-              <div class="icon-item"><a class="item-a" href=""><img class="icon-img icon-dif"   src="assets/Icons/Senasica.png" alt=""></a>
+              <div class="icon-item"><a class="item-a" href=""><img class="icon-dif icon-dif"   src="assets/Icons/Senasica.webp" alt=""></a>
               </div>
             </div>
           </div>
@@ -254,13 +270,26 @@
     <!-- MAPS & CONTACT SECTION -->
     <section id="contact-section">
       <div class="container my-5">
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="center-bottom">
           <h2 class="text-center text-uppercase maps-title">Productos de Alcance<br>Internacional</h2>
         </div>
-        <div class="content-map container text-center mt-5">
+        <div
+          data-aos="zoom-in"
+          data-aos-once="false"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="content-map container text-center mt-5">
           <img class="img-map" src="assets/images/World-contact.svg" alt="World contact">
         </div>
-        <div class="d-flex align-items-center justify-content-center w-30">
+        <div 
+        data-aos="zoom-out"
+          data-aos-once="false"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          class="d-flex align-items-center justify-content-center w-30">
           <button 
           type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
           class="border-0 bg-transparent btn-contact mb-lg-5 mb-3">
@@ -296,7 +325,7 @@
     <!-- FOOTER SECTION -->
     <footer>
       <div class="bg-footer container-fluid">
-        <div class="container py-5 d-flex flex-lg-row flex-column align-items-lg-start align-items-center justify-content-around gap-5 gap-lg-0">
+        <div class="container py-5 d-flex flex-lg-row flex-md-row flex-column align-items-lg-start align-items-md-start align-items-center justify-content-around gap-5 gap-lg-0">
           <div class="item-footer text-white d-flex flex-column gap-3">
             <span class="fw-bold">Dirección</span>
             <a>Allende<br>Nuevo León</a>
@@ -306,7 +335,7 @@
             <a>dimeci@gmail.com</a>
           </div>
           <div class="text-center mt-lg-3 mt-0">
-            <a href="#"><img src="assets/images/Logo-Dimeci.png" alt="Site Logo" class="logo-site_footer"></a>
+            <a href="#"><img src="assets/images/Logo-Dimeci.webp" alt="Site Logo" class="logo-site_footer"></a>
           </div>
           <div class="item-footer text-white d-flex flex-column gap-3">
             <span class="fw-bold">Teléfono</span>
@@ -337,5 +366,13 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS Script Initialice -->
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>

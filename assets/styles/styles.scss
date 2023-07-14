@@ -101,11 +101,11 @@ body {
         font-size: 2rem;
     }
     .contain-title>h1 {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     
         .contain-description>p {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
     .img-hero {
         width: 200%;
@@ -147,16 +147,16 @@ body {
 
 
 .single:nth-child(1) {
-    background-image: url("../images/orange.png");
+    background-image: url("../images/orange.webp");
 }
 .single:nth-child(2) {
-    background-image: url("/assets/images/mandarina.png");
+    background-image: url("/assets/images/mandarina.webp");
 }
 .single:nth-child(3) {
-    background-image: url(/assets/images/toronja.png);
+    background-image: url(/assets/images/toronja.webp);
 }
 .single:nth-child(4) {
-    background-image: url(/assets/images/lemon.png);
+    background-image: url(/assets/images/lemon.webp);
 }
 
 
@@ -229,7 +229,7 @@ body {
 
 /*CALIDAD PREMIUM STYLES*/
 #premium{
-    background-image: url(/assets/images/bg-premium.png);
+    background-image: url(/assets/images/bg-premium.webp);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -262,7 +262,13 @@ body {
             }
         }
     }
-    .certificate .icon-img,
+    .certificate .icon-img{
+        filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
+        // filter: invert(0%) sepia(6%) saturate(7%) hue-rotate(322deg) brightness(94%) contrast(100%);
+        // filter: invert(0%) sepia(18%) saturate(0%) hue-rotate(29deg) brightness(98%) contrast(103%);
+        width: 135px;
+        height: auto;
+    }
     .certificate .icon-dif{
         filter: invert(12%) sepia(4%) saturate(16%) hue-rotate(140deg) brightness(98%) contrast(10%);
         // filter: invert(0%) sepia(6%) saturate(7%) hue-rotate(322deg) brightness(94%) contrast(100%);
@@ -316,6 +322,7 @@ body {
         font-size: 2rem;
     }
     #premium {
+        background-size: contain;
         .premium-title{
             font-size: 2rem;
          }
@@ -324,10 +331,10 @@ body {
         }
         .certificate .icon-img 
         {
-            width: 180px;
+            width: 110px;
         }
         .certificate .icon-dif {
-            width: 250px;
+            width: 150px;
         }
     }
 }
