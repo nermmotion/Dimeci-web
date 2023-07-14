@@ -213,6 +213,11 @@ body {
   display: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .sec-accordio {
+    display: none;
+  }
+}
 /*CALIDAD PREMIUM STYLES*/
 #premium {
   background-image: url(/assets/images/bg-premium.png);
@@ -306,6 +311,31 @@ body {
   }
   #premium .certificate .icon-dif {
     width: 250px;
+  }
+}
+/*CARRUSEL RESPONSIVE*/
+.carousel-responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-responsive {
+    display: initial;
+  }
+  .carousel-responsive .carrusel-items::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 95%);
+  }
+  .carousel-responsive .carrusel-by .title-one {
+    font-size: 1.7rem;
+  }
+  .carousel-responsive .carrusel-by .parrafo {
+    font-size: 0.7rem;
   }
 }
 /* Maps and Contact Styles End */
