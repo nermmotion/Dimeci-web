@@ -27,4 +27,15 @@ function sendMail() {
             }, 2000);
         })
         .catch ((err) => console.log(err));
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Su mensaje no se pudo enviar" + res.status,
+            showConfirmButton: false,
+            timer: 1500
+          });
+        setTimeout(function(){
+            window.location.reload(true);
+            window.location.href = nextURL;
+        }, 2000);
 }
