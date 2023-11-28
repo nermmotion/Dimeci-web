@@ -11,6 +11,24 @@
     />
     <meta name="Dimeci" content="DIMECI" />
 
+    <!-- CDN UICONS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <!-- CDN SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="mail.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("8ObdqF4fE4ZwsDr-z");
+      })();
+    </script>
+
     <!-- Animate on Scroll AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -84,7 +102,7 @@
           data-aos-once="false"
           class="container row d-grid text-white">
             <div class="col-12 col-lg-8 contain-title">
-              <h1 class="px-2 px-lg-0">
+              <h1 class="px-2 px-lg-0 mt-5 mt-lg-0">
                 El placer de la inspiración<br />en cada gota
               </h1>
             </div>
@@ -321,52 +339,43 @@
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.5368070057502!2d-99.99255752388075!3d25.252521477675437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867d2b8aa5f1c649%3A0xaa7153350e6d667d!2sDistribuidora%20Mexicana%20de%20C%C3%ADtricos!5e0!3m2!1ses-419!2smx!4v1700813075673!5m2!1ses-419!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              <form class="container row align-items-center justify-content-center" needs-validation">
+              <div 
+                  id="contact-form"
+                  class="container row align-items-center justify-content-center" >
                 <div class="col-12 col-lg-10">
-                  <label for="inlineFormInputGroupUsername" class="form-label">Nombre y Apellido</label>
+                  <label for="name" class="form-label">Nombre y Apellido</label>
                   <div class="input-group">
-                    <!-- <div class="input-group-text">@</div> -->
-                    <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nombre Completo" required>
-                    <div class="invalid-feedback">
-                      Porfavor introduzca su nombre aquí.
-                    </div>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre Completo" required>
                   </div>
                 </div>
               
                 <div class="col-12 col-lg-10">
-                  <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@correo.com" required>
-                  <div class="invalid-feedback">
-                    Porfavor rellene este campo con un correo válido.
-                  </div>
-                  <!-- <span class="input-group-text" id="basic-addon2">@example.com</span> -->
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
                 </div>
               
                 <div class="col-12 col-lg-10">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                    <textarea placeholder="Escriba su mensaje aquí" class="form-control" id="exampleFormControlTextarea1" rows="8" required></textarea>
-                    <div class="invalid-feedback">
-                      Hace falta su mensaje aquí, introduzca su mensaje porfavor.
-                    </div>
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea placeholder="Escriba su mensaje aquí" class="form-control" id="message" rows="8" required></textarea>
                 </div>
 
                 <div class="col-12 col-lg-10">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <input class="form-check-input" type="checkbox" id="invalidCheck">
                     <label class="form-check-label" for="invalidCheck">
                       Acepto los términos y condiciones.
                     </label>
-                    <div class="invalid-feedback">
-                      Debe aceptar los términos antes.
-                    </div>
                   </div>
                 </div>
               
                 <div class="d-grid col-12 col-lg-10">
-                  <!-- <button type="submit" class="btn btn-primary">Enviar</button> -->
-                  <button class="btn btn-primary" type="submit">Enviar</button>
+                  <button 
+                    onclick="sendMail()"
+                    id="btn-submit" 
+                    class="btn btn-primary"
+                    >Enviar</button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
           <div class="modal-footer align-items-center justify-content-center">
@@ -422,26 +431,43 @@
     <div class="chat-widget">
       <div class="chat-widget--bubble">
         <!-- Ventas Icon -->
-        <div class="icon-whtp d-flex flex-column align-items-center justify-content-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-          </svg>
-          <h6 class="text-uppercase ms-3 mb-0 text-center">Ventas</h6>
+        <div class="icon-whtp d-flex flex-row align-items-center justify-content-between gap-3">
+
+          <a href="https://api.whatsapp.com/send?phone=528118087374&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" class="text-decoration-none text-muted text-white text-decoration-none text-muted text-white d-flex flex-row align-items-center gap-2">
+            <svg href="https://api.whatsapp.com/send?phone=528118087374&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+            <h6 class="text-uppercase ms-3 mb-0 text-left text-white">Contacto de Ventas</h6>
+
+          </a>
         </div>
         <!-- Provedores Icon -->
-        <div class="icon-whtp d-flex flex-column align-items-center justify-content-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-          </svg>
-          <h6 class="text-uppercase ms-3 mb-0 text-center">Proveedores de Fruta</h6>
+        <div class="icon-whtp d-flex flex-row align-items-center justify-content-between gap-3">
+
+          <a href="https://api.whatsapp.com/send?phone=528261142474&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" class="text-decoration-none text-muted text-white text-decoration-none text-muted text-white d-flex flex-row align-items-center gap-2">
+            <svg href="https://api.whatsapp.com/send?phone=528261142474&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+            <h6 class="text-uppercase ms-3 mb-0 text-left text-white">Proveedores de Fruta</h6>
+          </a>
+
+        </div>
+
+        <!-- Careers Icon -->
+        <div class="icon-whtp d-flex flex-row align-items-center justify-content-between gap-3">
+
+          <a href="https://api.whatsapp.com/send?phone=528118087374&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" class="text-decoration-none text-muted text-white text-decoration-none text-muted text-white d-flex flex-row align-items-center gap-2">
+            <svg href="https://api.whatsapp.com/send?phone=528118087374&text=%20Hola,%20buenos%20d%C3%ADas" target="_blank" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+            <h6 class="text-uppercase ms-3 mb-0 text-left text-white">Bolsa de Trabajo</h6>
+          </a>
+
         </div>
       </div>
     
-      <a class="chat-widget--button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16" style="color: white; border-color:#ffffff">
-          <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-          <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2"/>
-        </svg>
+      <a class="chat-widget--button text-decoration-none text-white">
+        <i class="fi fi-sr-add" style="font-size: 45px; height: 55px;"></i>
       </a>
     </div>
 

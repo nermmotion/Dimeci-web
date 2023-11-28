@@ -12,8 +12,8 @@
 
 button {
     padding: 0 1rem;
-    color: #6376ec;
-    border: 1px solid #6376ec;
+    /* color: #6376ec;
+    border: 1px solid #6376ec; */
     border-radius: 4px;
     line-height: 2rem;
     background-color: transparent;
@@ -22,7 +22,7 @@ button {
         color 350ms ease;
 
     &:hover {
-        background-color: #6376ec;
+        /* background-color: #6376ec; */
         color: white;
     }
 }
@@ -35,16 +35,17 @@ button {
     z-index: 8000;
 
     &--bubble {
+        color: white;
         cursor: default;
         display: block;
-        /* width: 240px; */
+        width: 240px;
         padding: 2rem;
         position: absolute;
-        right: -55px;
-        bottom: 4rem;
-        /* background-color: #f6f6f6;
+        right: 0px;
+        bottom: 5rem;
+        background-color: #4CAF50;
         border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(black, 0.3); */
+        box-shadow: 0 2px 4px rgba(black, 0.3);
 
         transform-origin: 90% 100%;
 
@@ -287,17 +288,18 @@ body {
     }
 
     .contain-title>h1 {
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: center;
     }
 
     .contain-description>p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         text-align: center;
     }
 
     .img-hero {
-        width: 200%;
+        width: auto;
+        height: 700px;
     }
 
     .middle-banner {
